@@ -23,6 +23,10 @@ export async function runChecksJson(
   );
   console.error(stderr);
 
+  console.log('test...');
+  console.log(stdout);
+  console.log('test2...');
+
   return {
     exitCode,
     report: JSON.parse(stdout),
