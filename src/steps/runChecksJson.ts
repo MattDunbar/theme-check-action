@@ -12,7 +12,7 @@ export async function runChecksJson(
       'theme',
       'check',
       devPreview ? '--dev-preview' : undefined,
-      ...flags.split(' '),
+      // ...flags.split(' '),
       ...['--output', 'json'],
       ...['--path', root],
     ].filter((x): x is string => Boolean(x)),
@@ -23,8 +23,12 @@ export async function runChecksJson(
   );
   console.error(stderr);
 
+  console.log('devPreview:');
+  console.log(devPreview);
+  console.log('root:');
+  console.log(root)
   console.log('test...');
-  console.log(stdout);
+  console.log("test: " + stdout + ";;");
   console.log('test2...');
 
   return {
